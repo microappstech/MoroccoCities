@@ -1,5 +1,8 @@
-﻿using System.ComponentModel.DataAnnotations.Schema;
+﻿using Newtonsoft.Json;
+
+using System.ComponentModel.DataAnnotations.Schema;
 using System.IO;
+
 
 namespace MoroccoCities.Models
 {
@@ -8,11 +11,14 @@ namespace MoroccoCities.Models
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
         public string Name { get; set; }
-        public int ProvinceId { get; set; }
-        public Province Province { get; set; }
+        public int RegionId { get; set; }
+        public Region Region { get; set; }
+        [System.Text.Json.Serialization.JsonIgnore]
+        [JsonIgnore]
         public ICollection<Street> Streets { get; set; }
-        public int Population { get; set; }
-        public int PostalCode { get; set; }
+        public int? Population { get; set; }
+        [JsonIgnore]
+        public int? PostalCode { get; set; }
     }
 
 }

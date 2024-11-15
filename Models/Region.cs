@@ -8,6 +8,14 @@ namespace MoroccoCities.Models
         public int Id { get; set; }
         public string Name { get; set; }
         public ICollection<Province> Provinces { get; set; }
+        public ICollection<City> Cities { get; set; }
+    }
+    public class RegionDto
+    {
+        public int Id { get; set; }
+        public string Name { get; set; }
+        public ICollection<Province> Provinces { get; set; }
+        public ICollection<City> Cities { get; set; }
     }
 
 }
