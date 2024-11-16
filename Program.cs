@@ -32,8 +32,8 @@ builder.Services.AddSwaggerGen(options =>
         Version = "v1",
         Title = "Morocco Cities API",
         Description = """
-            <center>
-                <strong><center>Information about API</center> </strong>
+            <div>
+                <strong><div>Information about API</div> </strong>
                 <i>This API provides information about cities in Morocco.</i>
                 <h3>Terms of Use API:</h3>
                 <ul>
@@ -48,9 +48,9 @@ builder.Services.AddSwaggerGen(options =>
                 </p>
                 <ul>
                     <li><strong>GolDev:</strong> Empowering developers with free tools and resources.</li>
-                    <li><a href="www.goldev.dev/hamza-mouddakir" target="_blank">Hamza Mouddakir</a>" Mouddakir! If you'd like to sponsor, contact us at <a href="mailto:hamzamouddakur@gmail.com">hamzamouddakur@gmail.com</a>.</li>
+                    <li><a href="https://www.goldev.dev/hamza-mouddakir/" target="_blank">Hamza Mouddakir</a>" Mouddakir! If you'd like to sponsor, contact us at <a href="mailto:hamzamouddakur@gmail.com">hamzamouddakur@gmail.com</a>.</li>
                 </ul>
-            </center>
+            </div>
             """,
         Contact = new OpenApiContact
         {
