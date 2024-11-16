@@ -31,7 +31,27 @@ builder.Services.AddSwaggerGen(options =>
     {
         Version = "v1",
         Title = "Morocco Cities API",
-        Description = "This API provides information about cities in Morocco.",
+        Description = """
+            <center>
+                <strong><center>Information about API</center> </strong>
+                <i>This API provides information about cities in Morocco.</i>
+                <h3>Terms of Use API:</h3>
+                <ul>
+                    <li>The API is completely free to use.</li>
+                    <li>No authentication is required for access.</li>
+                    <li>Use the API responsibly to avoid overloading the server.</li>
+                    <li>Sharing the API with others is encouraged!</li>
+                </ul>                
+                <h3>Sponsors:</h3>
+                <p>
+                    This API is proudly sponsored by:
+                </p>
+                <ul>
+                    <li><strong>GolDev:</strong> Empowering developers with free tools and resources.</li>
+                    <li><a href="www.goldev.dev/hamza-mouddakir" target="_blank">Hamza Mouddakir</a>" Mouddakir! If you'd like to sponsor, contact us at <a href="mailto:hamzamouddakur@gmail.com">hamzamouddakur@gmail.com</a>.</li>
+                </ul>
+            </center>
+            """,
         Contact = new OpenApiContact
         {
             Name = "Hamza Mouddakir",
@@ -47,15 +67,15 @@ var app = builder.Build();
 app.UseCors("AllowAll");
 
 // Configure the HTTP request pipeline.
-if (app.Environment.IsDevelopment())
-{
+//if (!app.Environment.IsDevelopment())
+//{
     app.UseSwagger();
     app.UseSwaggerUI(options =>
     {
         //options.SwaggerEndpoint("/swagger/v1/swagger.json", "Morocco Cities API v1");
         //options.RoutePrefix = string.Empty; // Makes Swagger UI the root page
     });
-}
+//}
 
 app.UseAuthorization();
 
